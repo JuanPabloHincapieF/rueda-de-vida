@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rueda de la Vida</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="logo-ring">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="56" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="4 6" />
+        <defs>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#8b1a1a" />
+            <stop offset="50%" stop-color="#e67e22" />
+            <stop offset="100%" stop-color="#f39c12" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="logo-center"><span>中間</span></div>
+    </div>
+    <h1>NAKAMA</h1>
+    <p class="subtitle">Rueda de la Vida</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- ── MAIN ── -->
+  <main>
+    <p class="sliders-title">Evalúa cada área · 0 al 10</p>
+
+    <div class="grid" id="sliders-grid"></div>
+
+    <div class="btn-wrap">
+      <button class="btn-generate" onclick="generateChart()">✦ Generar mi diagrama ✦</button>
+    </div>
+
+    <!-- ── CHART ── -->
+    <div id="chart-section">
+      <div class="chart-header">
+        <h2>Tu Rueda de la Vida</h2>
+        <p id="chart-date"></p>
+      </div>
+      <div class="chart-container">
+        <canvas id="radarChart"></canvas>
+      </div>
+      <button class="btn-download" onclick="downloadChart()">↓ Descargar imagen</button>
+    </div>
+  </main>
+
+  <footer>
+    <span>NAKAMA · Rueda de la Vida</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
